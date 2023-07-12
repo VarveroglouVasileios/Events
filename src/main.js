@@ -1,0 +1,10 @@
+import store from "./store/index";
+import { createApp } from "vue";
+import router from "./routes/routes";
+import App from "./App.vue";
+import BaseCard from "./UI/BaseCard.vue";
+const app = createApp(App);
+app.use(store);
+app.component("base-card", BaseCard);
+app.use(router);
+app.mount("#app");
